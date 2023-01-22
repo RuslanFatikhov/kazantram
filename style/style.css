@@ -1,0 +1,274 @@
+:root {
+  --black: #121212;
+  --white: #F5F5F5;
+  --gray: #8E8C8C;
+}
+
+html{
+}
+
+body{
+  background: var(--white);
+  padding-bottom: 100px;
+}
+
+main{
+  width: 100%;
+  max-width: 1312px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img{
+  border-radius: 16px;
+}
+
+.cover{
+  display: flex;
+  flex-direction: column;
+  grid-gap: 48px;
+
+  padding-top: 44px;
+  padding-bottom: 44px;
+
+}
+
+.cover h1{
+  color: var(--black);
+  animation-name: fadein;
+  atransition-timing-function: ease-out;
+  animation-duration: 1.2s;
+}
+
+.cover h3{
+  text-align: center;
+  color: var(--gray);
+  animation-name: fadein;
+  atransition-timing-function: ease-out;
+  animation-duration: 1.5s;
+}
+
+.cover img{
+  object-fit: contain;
+  animation-name: imganim;
+  atransition-timing-function: ease-out;
+  animation-duration: 2s;
+}
+
+#map{
+  top:0px;
+  transform: translateY(0px);
+}
+
+
+
+.selector{
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: row;
+  grid-gap: 8px;
+
+  animation-name: fadein;
+  atransition-timing-function: ease-out;
+  animation-duration: 0.8s;
+}
+
+
+/*button*/
+
+.button{
+  padding: 12px 18px;
+  border: 1px solid #8E8C8C;
+  border-radius: 12px;
+  color: #4D4D4D;
+  text-decoration: none;
+  transition: 0.2s;
+  text-align: center;
+  width: auto;
+}
+
+.button:hover{
+  background: #DCDBDB;
+  transition: 0.2s;
+}
+
+#unselected{
+  border: none;
+}
+
+
+.block{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.block p{
+  max-width: 640px;
+  color: var(--black);
+}
+
+.block h2{
+  max-width: 440px;
+  color: var(--black);
+}
+
+.callout{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 16px;
+  gap: 16px;
+
+  background: #EBEBEB;
+  border: 1px solid #E6E6E6;
+  border-radius: 16px;
+}
+
+.callout span{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.callout img{
+  width: 64px;
+  height: 64px;
+}
+
+.gallery{
+  margin-bottom: 100px;
+}
+
+.gallery img{
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.gallery span{
+  display: flex;
+  flex-direction: row;
+  grid-gap: 8px;
+}
+
+footer{
+  width: 100%;
+  max-width: 960px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+footer p{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  /* or 22px */
+  text-align: center;
+  color: var(--black);
+}
+
+footer a{
+  text-decoration: none;
+  color: var(--gray);
+}
+
+footer h3{
+  font-size: 44px;
+  margin-top: 100px;
+  text-decoration: none;
+  opacity: 0.25;
+  text-align: center;
+}
+
+
+.fancybox-infobar{
+  font-family: 'Inter Tight', sans-serif;
+}
+
+
+/* mobile */
+@media (max-width: 940px) {
+
+  body{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .cover{
+    grid-gap: 24px;
+  }
+
+  .button{
+    padding: 6px 10px;
+  }
+
+  .cover img{
+    margin:0;
+  }
+
+  .block{
+    flex-direction: column;
+  }
+
+  .block h2{
+    margin-bottom: 24px;
+  }
+
+  footer p{
+    text-align: left;
+  }
+
+  footer h3{
+  font-size: 32px;
+  margin-top: 100px;
+  text-decoration: none;
+  opacity: 0.25;
+  text-align: left;
+}
+}
+
+
+
+/*animation*/
+
+@keyframes fadein{
+
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+    
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+}
+
+@keyframes imganim{
+
+  from {
+    opacity: 0;
+    transform: translateY(1000px);
+    
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+}
